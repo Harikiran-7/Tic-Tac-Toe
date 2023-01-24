@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+#Box_of_tictactoe{
+
+    display:grid;
+    justify-content: center;
+    top: 50;
+   height:600px;
+   width:600px;
+   grid-template-columns: 1fr 1fr 1fr;
+   border: 2px solid black;
+}
+#Box{
+    display:flex;
+   justify-content: center;
+}
+.ele{
+    top:50%;
+    left:50%;
+    border:1px solid black;
+    justify-content: center;
+    align-items: center;
+    
+}
+#winner{
+    padding-left: 45%;
+}
