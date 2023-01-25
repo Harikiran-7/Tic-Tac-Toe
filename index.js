@@ -1,6 +1,7 @@
 let items = document.querySelectorAll(".ele");
 let win=document.querySelector('#winner');
 let stop=1;
+let count=0;
 let player='X';
 let declare=()=>{
     if(win.innerHTML===''){
@@ -78,6 +79,7 @@ items.forEach(element => {
                     element.innerHTML="X";
                     element.style.backgroundColor='red';
                     player='O';
+                    count++;
                     resetTimer();
                     }
                 }else{
@@ -85,11 +87,15 @@ items.forEach(element => {
                     element.innerHTML="O";
                     element.style.backgroundColor='green';
                     player='X';
+                    count++;
                     clearInterval();
                     resetTimer();
                     }
                 }
                 check();
+                if(count==9){
+                    win.innerHTML="Draw";
+                }
                 state=!state;
                if(stop){
                 console.log('timeout')
